@@ -11,9 +11,10 @@ class Condition extends Component {
 constructor(props) {
     super(props);
       this.state = {
-        wdata : '',
+        ldata : '',
         value : '',
-        query : ''
+        query : '',
+        cdata : ''
       }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -30,9 +31,11 @@ constructor(props) {
         axios.get(url+this.state.value)
         .then(response => {
             this.setState({
-              wdata : response.data.location
+              ldata : response.data.location,
+              cdata : response.data.current
             })
-             console.log(this.state.wdata);
+             console.log(this.state.ldata);
+             console.log(this.state.cdata);
         })
        }
 
@@ -43,7 +46,7 @@ constructor(props) {
 
   render() {
 
-    const {wdata} = this.state;
+    const {ldata, cdata} = this.state;
   
   return (
       <div className="container">
@@ -53,7 +56,7 @@ constructor(props) {
           <button type="submit" className="submit-button">Submit</button>
         </form>
 
-        <Display data={wdata} />
+        <Display data={ldata} data_c={cdata} />
       </div>
     );
   }

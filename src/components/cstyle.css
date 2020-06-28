@@ -1,6 +1,8 @@
 .container {
     min-height: 100vh;
     background-image: linear-gradient(to right, #b0d6d6, #9cdddc, #84e4e0, #68ebe2, #3ef2e3);
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .search-form {
