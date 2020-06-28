@@ -1,0 +1,44 @@
+.container {
+    min-height: 100vh;
+    background-image: linear-gradient(to right, #b0d6d6, #9cdddc, #84e4e0, #68ebe2, #3ef2e3);
+}
+
+.search-form {
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.insertbox {
+    width : 50%;
+    border: none;
+    padding : 10px;
+    border-radius: 5px;
+}
+
+.logo {
+    width: 250px;
+    margin-top: 50px;
+    border-radius: 100px;
+    margin-left: 40%;
+    margin-right: auto;
+}
+
+.submit-button {
+    background: rgb(52, 133, 184);
+    color : white;
+    padding : 10px 20px;
+    border: none;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 770px) {
+    .container {
+      margin: 0 10%;
+    }
+  
+    .logo {
+      width: 100%;
+    }
+  }

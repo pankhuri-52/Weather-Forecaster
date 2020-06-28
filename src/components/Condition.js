@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import Display from './Display';
+import image from './images/download.jpg';
+import './cstyle.css';
 
 const url = `http://api.weatherapi.com/v1/current.json?key=e2e00c27a0ae457e9ae162727202403&q=`;
 
@@ -44,10 +46,11 @@ constructor(props) {
     const {wdata} = this.state;
   
   return (
-      <div>
+      <div className="container">
+        <img className="logo" src={image} alt="weather-forecast" />
         <form className="search-form" onSubmit={this.handleSubmit}>
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
-          <button type="submit">Submit</button>
+          <input type="text" className="insertbox" value={this.state.value} onChange={this.handleChange} />
+          <button type="submit" className="submit-button">Submit</button>
         </form>
 
         <Display data={wdata} />
